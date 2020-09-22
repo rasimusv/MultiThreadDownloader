@@ -1,8 +1,6 @@
 package ru.itis.MultiThreadDownloader.app;
 
 import com.beust.jcommander.*;
-import ru.itis.MultiThreadDownloader.utils.FileListConverter;
-import java.util.List;
 
 @Parameters(separators = "=")
 public class Args {
@@ -19,9 +17,8 @@ public class Args {
 
     @Parameter (
             names = {"--files"},
-            description = "Selection of URL addresses to download. To separate files use semicolon",
-            listConverter = FileListConverter.class)
-    public List<String> files;
+            description = "Selection of URL addresses to download. To separate files use semicolon")
+    public String files;
 
     @Parameter (
             names = {"--folder"},
