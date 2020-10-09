@@ -19,9 +19,7 @@ public class Program {
         } else {
             ExecutorService es = Executors.newFixedThreadPool(argv.count);
             for (String file : argv.files.split(",")) {
-                es.submit(() -> {
-                    downloader.download(file);
-                });
+                es.submit(() -> downloader.download(file));
             }
         }
     }
